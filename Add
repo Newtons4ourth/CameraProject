@@ -1,0 +1,46 @@
+using System;
+
+namespace Code 
+{
+
+class Program 
+  {
+  
+  //Main Function. Runs when the program starts
+  public static void Main(string[] args)
+    {
+    	//Variables
+			int num01;
+			int num02;
+			
+			Start:
+			Console.WriteLine("Hello World");
+      Console.WriteLine("Please pick a number");
+			try
+			{
+			num01 = Convert.ToInt32(Console.ReadLine());
+			}
+			catch
+			{
+			Console.WriteLine("Invalid response. Restarting");
+			goto Start;
+			}
+			
+			Console.WriteLine("Please pick another number");
+		  try
+			{
+			num02 = Convert.ToInt32(Console.ReadLine());
+			}
+			catch
+			{
+			Console.WriteLine("Invalid response. Restarting");
+			goto Start;
+			}
+			
+			Console.WriteLine(num01 + "+" + num02 "=" + (num01 + num02));			
+		
+		}
+  
+  }
+  
+}
